@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'sayone/header.html' %}
+
+<h1 class="text-center mt-3">Available Books</h1>
+<div class="row">
+{% for detail in my_details %}
+        <div class="card ml-5 shadow-lg mt-5" style="width: 18rem; border-radius: 10px; border:none">
+            <div class="card-body">
+              <h5 class="card-title">Name  -  {{detail.book_name}}</h5>
+              <h5>category - {{detail.category}}</h5>
+              <h5>No. of Pages - {{detail.pages}}</h5>
+          <!-- <a href='{{detail.id}}/' class="btn btn-primary mt-3">More Detail</a> -->
+              <a href='{{detail.book_name}}/' class="btn btn-outline-primary mt-3">More Detail</a>
+            
+            </div>
+          </div>
+          {% endfor %}
+    </div>
+    
+{% endblock %}

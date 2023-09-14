@@ -1,0 +1,20 @@
+.login-body{
+    /* background: linear-gradient(to right, #3164f6, #33AEFF); */
+    background-color: #0035c8;
+    border-radius: 8px;
+}
+
+
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}
+
+.btn-google {
+    color: white !important;
+    background-color: #db3236	;
+}
+.btn-google:hover {
+    background-color: #c11d1f	;
+}

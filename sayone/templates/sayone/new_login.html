@@ -1,0 +1,59 @@
+{% extends 'new_base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'sayone/new_login.css' %}">
+
+<section class=" vh-100" >
+    <div class="container login-body h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="{% static 'sayone/star2.png'%}" alt="My image" class="img-responsive img-fluid">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <div class="row mt-5">
+
+                    <div class="card border-0 shadow rounded-3 my-5" style="width: 26rem;">
+                        <div class="card-body p-4 p-sm-5">
+                            <h3 class="card-title text-center mb-5 fw-light fs-5">Sign
+                                In</h3>
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                                        in</button>
+                                    </div>
+                                    <div class=" text-center">
+                                        <a href="" class="text-decoration-none">Forget Password</a>
+                                    </div>
+                                <hr class="my-4">
+                                <div class="d-grid">
+                                    <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                                        <i class="bi bi-google px-1" style="color: #ffffff;"></i> Signin with Google
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

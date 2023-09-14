@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'sayone/header.html' %}
+
+<div class="card mx-auto mt-5 shadow-lg" style="width: 25rem;">
+  <h3 class="text-center mt-3 mb-3">Complete Book Detail</h3>
+  <table  class="table table-hover ">
+    <tbody>
+      <tr>
+        <th scope="row">Book_name</th>
+        <td>{{ my_details.book_name }}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">category</th>
+        <td>{{my_details.category}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Pages</th>
+        <td>{{my_details.pages}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Author_id</th>
+        <td> {{my_details.Author_id}}</td>
+      </tr>
+      <tr>
+        <th scope="row">category_id</th>
+        <td>{{my_details.category_id}}</td>
+      </tr>
+      <tr>
+        <th scope="row">publisher_id</th>
+        <td> {{my_details.publisher_id}}</td>
+      </tr>
+      <tr>
+        <th scope="row">is_published</th>
+        <td>{{my_details.is_published}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

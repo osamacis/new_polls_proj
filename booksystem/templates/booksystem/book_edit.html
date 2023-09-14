@@ -1,0 +1,15 @@
+
+  {% extends 'base.html' %}
+  {% block content %}
+  {% include 'sayone/header.html' %}
+  <div class="card mx-auto mt-5" style="width: 24rem;">
+    <div class="card-body mr-5 ml-5">
+        <h3 class="text-center mb-5 text-info">Edit Details </h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn-primary btn-sm " type="submit" value="    UPDATE    " />
+        </form>
+    </div>
+  </div>
+  {% endblock %}

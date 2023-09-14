@@ -1,0 +1,15 @@
+
+  {% extends 'base.html' %}
+  {% block content %}
+  {% include 'sayone/header.html' %}
+  <div class="card mx-auto mt-5" style="width: 22rem;">
+    <div class="card-body ml-4 mr-4">
+        <form method="post">
+            {% csrf_token %}
+            <h2 class="text-center text-info mb-4 ">Add Book</h2>
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary btn-lg" value="Add" />
+        </form>
+    </div>
+  </div>
+  {% endblock %}

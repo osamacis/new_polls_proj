@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'sayone/header.html' %}
+<h1 class="mt-4 text-center">welcome to about page of sayone application</h1>
+<div class="d-flex col-sm-4 mx-auto mt-5">
+    <form>
+        <div style="position:relative;">
+            <select
+                style="position:absolute;top:0px;left:0px;width:200px; height:40px;line-height:20px;margin:0;padding:0;"
+                onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+                {% for item in data_list %}
+                <option class="text-dark" value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+            </select>
+            <input type="text" name="displayValue" id="displayValue" placeholder="Enter/select a value"
+                onfocus="this.select()" style="position:absolute;top:0px;left:0px;width:183px;height:40px;">
+            <input name="idValue" id="idValue" type="hidden" class="form-control">
+        </div>
+        <div style="margin-left: 300px;">
+            <label>Choose a browser from this list:
+                <input list="browsers" name="myBrowser" />
+            </label>
+            <datalist id="browsers">
+                <option value="Chrome">
+            </datalist>
+        </div>
+    </form>
+</div>
+
+<script>
+    var dataListOptions = ["Option 1", "Option 2", "Option 3"];
+
+    var dataList = document.getElementById("browsers");
+    dataList.innerHTML = ""
+
+    for (var i = 0; i < dataListOptions.length; i++) {
+        var option = document.createElement("option");
+        option.value = dataListOptions[i];
+        dataList.appendChild(option);
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'sayone/header.html' %}
+
+<div class="row">
+    <div class="col-md-12 col-centered">
+        <h1 class="mt-5 mb-3 text-center text-info">Login</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-3 text-center">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Login" class="btn btn-outline-primary" />
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+        </form>
+        <p class="mt-5">Don't have an account ?&nbsp;<a href="{%url 'sayone:signup'%}">Create </a> </p>
+    </div>
+</div>
+</div>
+{% endblock %}
